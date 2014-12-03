@@ -1,1 +1,4 @@
+*.ipynb_checkpoints
 *.gz
+*.csv
+.DS_STORE
