@@ -41,11 +41,7 @@ def save_model(clf):
     joblib.dump(clf, 'classifier.pkl')
 
 
-train_data_df = load_df('csv/train_small.csv')
-
-# id column is not required for training purposes
-train_data_df = train_data_df.drop(['id'], axis=1)
-train_data = train_data_df.values
+train_data = load_df('csv/train_small.csv').values
 
 X_train, X_test, y_train, y_test = train_test_split(train_data[0::, 1::], train_data[0::, 0],
                                                     test_size=0.3, random_state=0)
